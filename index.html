@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" /> 
+  <title>Random Trivia</title>
+  <meta name="description" type="A Trivia quiz app about random things">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <main role="main" class="container">
+    <header role="banner" class="header">
+      <section>
+        <a href="index.html">
+          <img class="wizard" src="https://vignette.wikia.nocookie.net/adventuretimewithfinnandjake/images/d/d5/Wizard_Thief.png/revision/latest?cb=20120218044035" alt="trivia wizard" />
+        </a>
+      </section>
+      <section>
+        <ul>
+          <li class="sizeMe">Question:
+            <span class="questionNumber">0</span>/9</li>
+          <li class="sizeMe"> Your Score:
+            <span class="score">0</span>
+          </li>
+        </ul>
+      </section>
+    </header>
+    <section role="region" class= "startQuiz">
+      <section class="startQuiz box">
+        <h1>Random Trivia About Trivial Things!</h1>
+        <button type="button" class="startButton button">Start</button>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script src="store.js"></script>
+</body>
+
+</html>

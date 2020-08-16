@@ -1,0 +1,62 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: 1%;
+    
+   
+  }
+  
+  body {
+    font-family: 'Chalkduster', cursive;
+    text-transform: uppercase;
+    color: #e7dcd5;
+    background-color: #4009;
+    text-align: center;
+    font-size: 40px;
+  }
+  
+    .button {
+      margin-top: 0.5em;
+      font-size: 1em;
+      width: 5em;
+      height: 2.0em;
+      font-family: 'Chalkduster', cursive;
+      color:rgb(104, 17, 50);
+     cursor: pointer;
+    }
+  
+    .button:hover{
+      animation: shake 0.6s infinite;
+    }
+  
+    @keyframes shake {
+      0% {
+        transform : translate(0px, 0px) rotate(0Deg);
+      }
+      25% {
+        transform : translate(1px,1px) rotate(1Deg);
+      }
+      50% {
+        transform : translate(-1px,-1px) rotate(-1Deg);
+      }
+      75% {
+        transform : translate(2px,-1px) rotate(2Deg);
+      }
+      100% {
+        transform : translate(-1px,1px) rotate(-1Deg);
+      }
+    }
+  
+    .hide {
+      display: none;
+    }
+  
+    .sizeMe {
+      font-size: 20px;
+      color: firebrick;
+      display: inline-block;
+      padding: 20px;
+      font-family:'Chalkduster', cursive;
+    }
