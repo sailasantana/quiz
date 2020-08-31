@@ -2,6 +2,7 @@
 
 //My pseudocode:
 
+
 const quizInfo = {
     
   currentQuestionNumber:0,
@@ -37,21 +38,33 @@ function renderQuestion(){
    $('body').on('click','.submitButton', function(){
          console.log('abc');
       if (quizInfo.chosenAnswer === undefined) {
-       $('.error').html(`<p class = "result"> Please select an answer! </p>`)
+       $('.error').html(errorMessage)
     }
       else if (quizInfo.chosenAnswer == STORE[quizInfo.currentQuestionNumber].correctAnswer){
         quizInfo.currentScore ++ ;
-        $('body').html(`<p class = "result"> Correct! ${STORE[quizInfo.currentQuestionNumber].explain} </p>
-        <button type="button" class="nextButton button">Next</button>`)
+        $('body').html(correctFeeback)
 
     }
   
     else {
-      $('body').html(`<p class = "result"> Wrong! The answer is ${STORE[quizInfo.currentQuestionNumber].correctAnswer}. ${STORE[quizInfo.currentQuestionNumber].explain} </p> <button type="button" class="nextButton button">Next</button>`)
+      $('body').html(incorrectFeedback)
     }
   
    quizInfo.chosenAnswer = undefined;
   })
+  }
+
+  function errorMessage(){
+    return `<p class = "result"> Please select an answer! </p>`
+  }
+
+  function correctFeeback(){
+    return `<p class = "result"> Correct! ${STORE[quizInfo.currentQuestionNumber].explain} </p>
+        <button type="button" class="nextButton button">Next</button>`
+  }
+
+  function incorrectFeedback(){
+    return `<p class = "result"> Wrong! The answer is ${STORE[quizInfo.currentQuestionNumber].correctAnswer}. ${STORE[quizInfo.currentQuestionNumber].explain} </p> <button type="button" class="nextButton button">Next</button>`
   }
    
     
@@ -146,4 +159,5 @@ function renderQuestion(){
     changingOption();
   }
   
-  initQuiz();
+  
+  $(initQuiz)
